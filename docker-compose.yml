@@ -1,0 +1,10 @@
+version: "2"
+services:
+  web:
+    build: .
+    volumes:
+      #This means mount current directory ./ to /app directory on container. 
+      #':' is the separator between current dir parth and container dir path.
+      - ./:/app
+    ports:
+      - "3000:3000"
